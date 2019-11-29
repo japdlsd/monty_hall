@@ -31,7 +31,7 @@ def scenario3():
     first_choice = random.randint(0, 2)
     #print(f"first_choice:{first_choice}")
 
-    opened_door = random.choice([i for i in range(3) if i not in {prize_position, first_choice}])
+    opened_door = random.choice({0,1,2} - {prize_position, first_choice})
     #print(f"opened_door:{opened_door}")
     switched_choice = min({0, 1, 2} - {opened_door, first_choice})
     #print(f"switched_choice:{switched_choice}")
